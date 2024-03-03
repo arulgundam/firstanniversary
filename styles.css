@@ -1,63 +1,93 @@
+/* Apply a CSS reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set body height to 100% and apply background color */
 body {
-    height: 100%;
-    margin: 0; /* Remove default margin */
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
 
-h1, .text1 {
-    color: darkslategrey;
-    font-family: 'Didot', serif;
-}
-
+/* Center align text */
 .center {
     text-align: center;
 }
 
-.text1 {
-    width: 50%;
-    margin: 0 auto; /* Center the text box */
+/* Style for h1 and .text1 elements */
+h1, .text1 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-top: 30px;
 }
 
+/* Container for main content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Grid layout with equal width columns */
 .flex-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Three columns with equal width */
-    gap: 20px; /* Gap between grid items */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.col-middle {
-    flex: 2; /* Middle column takes up 2 times the space of other columns */
+/* Style for columns */
+.col-left,
+.col-middle,
+.col-right {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Style for left and right columns */
 .col-left,
 .col-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center; /* Center items horizontally */
+    justify-content: space-between;
 }
 
+/* Style for center column */
+.col-middle {
+    flex: 2;
+}
+
+/* Style for images */
+.center-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for captions */
+.caption {
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Cursor trail elements */
 .s1, .s2, .s3, .s4 {
     position: absolute;
     visibility: hidden;
+    z-index: 9999;
 }
 
+/* Styling for cursor trail elements */
 .s1 { font-size: 20pt; color: silver; }
 .s2 { font-size: 36pt; color: pink; }
 .s3 { font-size: 28pt; color: red; }
 .s4 { font-size: 24pt; color: purple; }
-
-.center-image {
-    max-width: 100%; /* Set the maximum width to 100% of the container width */
-    max-height: 100%; /* Set the maximum height to 100% of the container height */
-    display: block; /* Center the image */
-    margin: auto; /* Center the image */
-}
-
-.caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-}
-
