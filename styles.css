@@ -8,8 +8,7 @@
 /* Set body height to 100% and apply background color */
 body {
     height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
 }
 
 /* Center align text */
@@ -20,8 +19,13 @@ body {
 /* Style for h1 and .text1 elements */
 h1, .text1 {
     color: #333;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', serif;
     margin-top: 30px;
+}
+
+.text2 {
+    color: #333;
+    font-family: 'Georgia', serif;
 }
 
 /* Container for main content */
@@ -43,7 +47,6 @@ h1, .text1 {
 .col-left,
 .col-middle,
 .col-right {
-    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
